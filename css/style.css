@@ -1,0 +1,253 @@
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: url('../img/bg.jpg');
+    background-repeat: repeat;
+    background-size: contain;
+    color: #fff;
+}
+    .main {
+        background: radial-gradient(circle, rgb(0, 146, 213) 0%, rgba(1,33,57,1) 100%);
+    }
+        .sub-main {
+            width: 95%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+    .sh-1 {
+        font-size: 3rem;
+    }
+    .sh-2 {
+        font-size: 2rem;
+    }
+
+/* ==== hero ==== */
+
+    /* ==== header ==== */
+    #header {
+        width: 100%; 
+        height: 100px; 
+        overflow: hidden; 
+        padding: 5px 0;
+    }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #logo {
+            width: 100%;
+            margin: 20px 0 10px;
+        }
+            #logo img {
+                width: 100px;
+                display: block;
+                margin: 0 auto;
+            }
+        nav {
+            width: 100%;
+        }
+            nav ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+                nav ul li:not(:last-child) {
+                    margin-right: 30px;
+                }
+                nav a {
+                    color: #d8ebe3;
+                    transition: 0.5s;
+                    text-transform: uppercase;
+                    font-size: .8rem !important;
+                    letter-spacing: 0.5px;
+                    font-weight: 600;
+                }
+                    nav a:hover, .nav-btn {
+                        color: #d8ebe3;
+                        padding: 0 0 5px;
+                        border-bottom: 2px solid #fff;
+                    }
+                        .nav-btn:hover {
+                            color: #0c1f17;
+                            background: #d8ebe3;
+                            transition: 0.5s;
+                        }
+
+    .lp-1h h1 {
+        font-size: 2.5rem;
+        padding: 0;
+    }
+        .lp-btn {
+            padding: 10px 30px;
+            background: #0c1f17;
+            color: #fff;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+            .lp-btn:last-child {
+                margin-left: 10px;
+                color: #0c1f17;
+                background: #fff;
+            }
+            .lp-btn:first-child:hover {
+                color: #0c1f17;
+                background: #fff;
+            }
+            .lp-btn:last-child:hover {
+                background: #0c1f17;
+                color: #fff;
+            }
+    .lp-2h img {
+        width: 80%;
+    }
+
+    @media screen and (max-width:1024px)  {
+        header {
+            margin-bottom: 30px;
+        }
+        .sub-main {
+            width: 100%;
+        }
+        .lp-2h {
+            display: none;
+        }
+        .lp-1h {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 2.5%;
+        }
+            .lp-1h h1 {
+                font-size: 1.8rem;
+                margin: 20px 0;
+            }
+        .lp-btn {
+            padding: 5px 10px;
+        }
+    }
+
+/* ==== About ==== */
+#about {
+    margin: 20px auto;
+}
+    .vsn-card {
+        box-shadow: 2px 2px 5px 2px #004f74, -2px -2px 5px 2px #004f74;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 230px;
+        margin-bottom: 20px;
+    }
+        .vsn-card h3 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+@media screen and (max-width:1024px) {
+    .vsn-card {
+        margin: 0 auto 20px;
+        padding: 10px;
+        width: 95%;
+        margin: auto;
+    }
+    .abt-card {
+        width: 95%;
+        margin: 0 auto 10px;
+    }
+}
+
+/* ==== Footer ==== */
+footer {
+    margin-top: 30px;
+    padding: 20px 0 0;
+}
+    .ft-card h3 {
+        font-size: .8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+    }
+    .ft-card a {
+        color: #fff;
+        display: block;
+        font-size: .9rem;
+        padding: 5px 0;
+        transition: 0.5s;
+    }
+        .ft-card a:hover {
+            text-decoration: underline;
+            transition: 0.5s;
+            color: #000;
+        }
+        .ft-card a span {
+            padding-left: 5px;
+        }
+    .ft-card img {
+        width: 300px;
+        margin: auto;
+        display: block;
+    }
+
+.copyright {
+    border-top: 2px solid #000;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .vsn-card {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+/* ---------------- For Animation on Scroll ---------------- */
+.slideanim {
+    visibility:hidden;
+    visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {visibility: visible; animation:slide 1s;}
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
